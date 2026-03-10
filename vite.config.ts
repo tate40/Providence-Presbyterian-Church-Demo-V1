@@ -18,6 +18,7 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
+
   server: {
     port: 3000,
     strictPort: false,
@@ -26,5 +27,11 @@ export default defineConfig({
       strict: true,
       deny: ["**/.*"],
     },
+  },
+
+  preview: {
+    port: 3000,
+    host: true,
+    allowedHosts: true,
   },
 });
